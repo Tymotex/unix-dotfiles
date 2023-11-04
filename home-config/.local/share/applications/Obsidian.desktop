@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Obsidian
+Categories=Office
+Icon=$HOME/AppImages/obsidian.png
+Exec=$HOME/AppImages/Obsidian.AppImage
+

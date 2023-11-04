@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/tym/.screenlayout/main.sh" added="2023-10-02T05:51:02.399760Z" modified="2023-10-09T20:12:11.951216Z" visited="2023-10-02T05:51:02.399760Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-shellscript"/>
+        <bookmark:applications>
+          <bookmark:application name="arandr" exec="&apos;arandr %u&apos;" modified="2023-10-09T20:12:11.951203Z" count="4"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/tym/.screenlayout/main-3.sh" added="2023-11-04T08:59:32.338481Z" modified="2023-11-04T09:16:23.396121Z" visited="2023-11-04T08:59:32.338482Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-shellscript"/>
+        <bookmark:applications>
+          <bookmark:application name="arandr" exec="&apos;arandr %u&apos;" modified="2023-11-04T09:16:23.396120Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/tym/Wiki/content" added="2023-11-04T10:15:30.013924Z" modified="2023-11-04T10:15:30.013928Z" visited="2023-11-04T10:15:30.013925Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="obsidian" exec="&apos;obsidian %u&apos;" modified="2023-11-04T10:15:30.013926Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

@@ -1,0 +1,20 @@
+# This config was sourced from https://gist.github.com/kabili207/2cd2d637e5c7617411a666d8d7e97101
+[Unit]
+Description=Google Drive Obsidian Synchroniser
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=notify
+ExecStartPre=-/usr/bin/mkdir -p %h/Wiki
+ExecStart= \
+  /usr/bin/rclone mount \
+    --config=%h/.config/rclone/rclone.conf \
+    --vfs-cache-mode writes \
+    --vfs-cache-max-size 100M \
+    --umask 022 \
+    GoogleDriveWiki:wiki %h/Wiki
+ExecStop=/bin/fusermount -u %h/Wiki
+
+[Install]
+WantedBy=default.target
