@@ -109,6 +109,7 @@ alias copy='xclip -selection clipboard'
 
 # i3
 alias i3r='i3-msg restart'
+alias i3conf='$EDITOR /home/tym/Dotfiles/home-config/.config/i3/config'
 
 # Always show hidden files.
 alias ls='ls -a --color=auto'
@@ -126,3 +127,8 @@ alias s="git status"
 alias p="git pull"
 alias u="git push"
 alias b="git branch"
+
+# System notification.
+alias notify="notify-send"
+
+

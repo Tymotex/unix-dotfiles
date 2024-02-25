@@ -6,7 +6,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:System San Francisco Display 20
+font pango:System San Francisco Display 14
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -104,6 +104,12 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
+bindsym $mod+Ctrl+h resize shrink width 10 px or 10 ppt
+bindsym $mod+Ctrl+j resize shrink height 10 px or 10 ppt
+bindsym $mod+Ctrl+k resize grow height 10 px or 10 ppt
+bindsym $mod+Ctrl+l resize grow width 10 px or 10 ppt
+bindsym $mod+Ctrl+plus resize grow width 10 px or 10 ppt
+bindsym $mod+Ctrl+minus resize shrink width 10 px or 10 ppt
 
 # This makes your keyboard's volume up, down, mute and mic mute buttons work.
 # Use pactl to adjust volume in PulseAudio.
@@ -145,6 +151,10 @@ bindsym $mod+p exec pavucontrol                          # p for Pavucontrol
 bindsym $mod+i exec alacritty -e nmtui                   # i for internet
 bindsym $mod+n exec nemo ~                               # n for nemo
 bindsym $mod+c exec code                                 # c for code (VSCode)
+bindsym $mod+Shift+O exec redshift -O 5000               # Redden the screen.
+bindsym $mod+Shift+P exec redshift -x                    # Reset redshift.
+bindsym $mod+b exec alacritty -e bluetoothctl            # b for bluetooth.
+bindsym $mod+Shift+b exec blueman-manager                # Blueman.
 
 # Screenshot snipper.
 # I need to use `--release` for the screen capture to work.
@@ -161,7 +171,9 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 #                               Invocations
 # =============================================================================
 # Enable Picom transparency.
-exec_always --no-startup-id picom --experimental-backends &
+exec_always --no-startup-id picom \
+	--experimental-backends \
+	--config ~/.config/picom/picom.conf &
 
 # Run script to correctly lay out my monitors (and also fix monitor issues like
 # screen tearing).
@@ -170,12 +182,12 @@ exec_always /home/tym/.screenlayout/main.sh
 # Remap caps and escape.
 exec_always setxkbmap -option caps:escape
 
+# Enable dunst daemon. Doing so allows you to invoke `notify-send`.
+exec --no-startup-id dunst
+
 # =============================================================================
 #                                Theming
 # =============================================================================
-# Set a wallpaper.
-exec_always feh --bg-scale ~/Pictures/_wallpaper.png
-
 # Disables title bars on windows.
 new_window pixel 3
 for_window [class="^.*"] border pixel 2
