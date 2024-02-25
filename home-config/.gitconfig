@@ -1,0 +1,9 @@
+[user]
+	email = admin@timz.dev
+	name = Tim Zhang
+[core]
+	editor = vim
+[credential]
+	helper = store
+[pager]
+	log = false
