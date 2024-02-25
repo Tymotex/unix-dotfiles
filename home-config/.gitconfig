@@ -7,3 +7,4 @@
 	helper = store
 [pager]
 	log = false
+    branch = false
