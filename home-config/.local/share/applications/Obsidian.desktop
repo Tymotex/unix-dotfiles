@@ -1,6 +1,8 @@
 [Desktop Entry]
 Name=Obsidian
+Type=Application
 Categories=Office
-Icon=$HOME/AppImages/obsidian.png
-Exec=$HOME/AppImages/Obsidian.AppImage
+Comment=Obsidian - a powerful note-taking app
+Icon=/home/tym/AppImages/obsidian.png
+Exec=/home/tym/AppImages/Obsidian.AppImage
 

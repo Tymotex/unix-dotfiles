@@ -11,6 +11,10 @@ cd unix-dotfiles
 
 # Running this will 'push' all config in this tree to the $HOME directory.
 stow --target=$HOME --dir . home-config
+stow --target=$HOME --adopt --dir . home-config   # Forcefully overwrite all local configs with the ones from this repo.
+
+# Or more simply:
+cd home-config && stow .
 
 # Running this will 'push' all config in this tree to the root directory.
 # WARNING: If you run this with --adopt, then it will overwrite existing files.
