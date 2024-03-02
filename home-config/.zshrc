@@ -109,16 +109,22 @@ alias copy='xclip -selection clipboard'
 
 # i3
 alias i3r='i3-msg restart'
-alias i3conf='$EDITOR /home/tym/Dotfiles/home-config/.config/i3/config'
+
+# Stow sync the home directory's configs.
+alias syncdotfiles='stow --target=$HOME --adopt --dir /home/tym/Dotfiles home-config '
+
+# Configuration editing shorthands
+alias i3conf='$EDITOR /home/tym/Dotfiles/home-config/.config/i3/config && syncdotfiles'
+alias picomconf='$EDITOR /home/tym/Dotfiles/home-config/.config/picom/picom.conf && syncdotfiles'
+alias zshconf='$EDITOR /home/tym/Dotfiles/home-config/.zshrc && syncdotfiles'
+alias vimconf='$EDITOR /home/tym/Dotfiles/home-config/.vimrc && syncdotfiles'
+alias terminalconf='$EDITOR /home/tym/Dotfiles/home-config/.config/alacritty/alacritty.toml && syncdotfiles'
 
 # Always show hidden files.
 alias ls='ls -a --color=auto'
 
 # Open file manager.
 alias open='nemo'
-
-# Stow sync the home directory's configs.
-alias syncdotfiles='stow --target=$HOME --adopt --dir /home/tym/Dotfiles home-config '
 
 # Git commands.
 alias c="git commit -m "

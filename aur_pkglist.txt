@@ -1,0 +1,16 @@
+autotiling 1.9.1-1
+cbonsai 1.3.1-3
+cbonsai-debug 1.3.1-3
+downgrade 11.3.0-1
+escrotum-git 0.2.1.r48.a41d0f1-1
+google-chrome 119.0.6045.123-1
+i3lock-color 2.13.c.5-1
+i3lock-color-debug 2.13.c.5-1
+ncpamixer-debug 1.3.7-1
+turbo-base64 2023.08-2
+turbo-base64-debug 2023.08-2
+ueberzugpp 2.9.4-1
+ueberzugpp-debug 2.9.4-1
+visual-studio-code-bin 1.84.2-1
+xlayoutdisplay 1.5.0-1
+yay 12.1.3-1

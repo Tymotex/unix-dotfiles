@@ -27,3 +27,8 @@ Occasionally, run `pacman -Qqe > pkglist.txt` to update `pkglist.txt`, as instru
 
 This list of packages can be restored by following the instructions at https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#List_of_installed_packages.
 
+## Special Dependencies
+- `xborders` is being used to overwrite default i3 borders. I've moved the repo
+  containing the `xborders` script to `Scripts/xborders` and set up an alias to
+  it in ZSH.
+

@@ -1,3 +1,5 @@
+# Setup script to install and configure some dependencies.
+
 # Assumes that Zsh is already installed.
 
 # Set up oh-my-zsh.
