@@ -27,6 +27,9 @@ exec --no-startup-id nm-applet
 # Kill current window.
 bindsym $mod+Shift+q kill
 
+# Lock the screen using `betterlockscreen`.
+bindsym $mod+shift+o exec betterlockscreen -l dimblur
+
 # Focus on window with hjkl.
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -154,6 +157,9 @@ bindsym $mod+Shift+b exec blueman-manager                # Blueman.
 bindsym $mod+Shift+Return exec alacritty \
 	-e ipython \
 	--TerminalInteractiveShell.editing_mode=vi       # Launch ipython. 
+bindsym $mod+Shift+c exec --no-startup-id rofi \
+	-modi "clipboard:greenclip print" \
+	-show clipboard                                  # Launch Greenclip clipboard manager.
 
 # Screenshot snipper.
 # I need to use `--release` for the screen capture to work.
@@ -190,7 +196,13 @@ exec_always setxkbmap -option caps:escape
 exec --no-startup-id dunst &
 
 # Enable autotiling. See https://github.com/nwg-piotr/autotiling.
-exec --no-startup-id autotiling &
+# Only enable it on odd numbered workspaces because autotiling messes with
+# tab stacking.
+exec --no-startup-id autotiling \
+	-w 1 3 5 7 9 &
+
+# Greenclip clipboard manager.
+exec --no-startup-id greenclip daemon>/dev/null
 
 # =============================================================================
 #                                Appearance
@@ -274,7 +286,8 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Reload the configuration file.
-bindsym $mod+Shift+c reload
+# bindsym $mod+Shift+c reload
 
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3).
-bindsym $mod+Shift+r restart
+# bindsym $mod+Shift+r restart
+

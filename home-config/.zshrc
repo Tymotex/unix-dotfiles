@@ -119,6 +119,7 @@ alias picomconf='$EDITOR /home/tym/Dotfiles/home-config/.config/picom/picom.conf
 alias zshconf='$EDITOR /home/tym/Dotfiles/home-config/.zshrc && syncdotfiles'
 alias vimconf='$EDITOR /home/tym/Dotfiles/home-config/.vimrc && syncdotfiles'
 alias terminalconf='$EDITOR /home/tym/Dotfiles/home-config/.config/alacritty/alacritty.toml && syncdotfiles'
+alias polybarconf='$EDITOR /home/tym/Dotfiles/home-config/.config/polybar/config.ini && syncdotfiles'
 
 # Always show hidden files.
 alias ls='ls -a --color=auto'
