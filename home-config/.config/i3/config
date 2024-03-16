@@ -73,7 +73,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # Resize window.
-bindsym $mod+r mode "resize"
+# bindsym $mod+r mode "resize"
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
         # Pressing h will shrink the window’s width.
@@ -153,6 +153,7 @@ bindsym $mod+c exec code                                 # c for code (VSCode)
 bindsym $mod+Ctrl+O exec redshift -O 5000                # Redden the screen.
 bindsym $mod+Ctrl+P exec redshift -x                     # Reset redshift.
 bindsym $mod+b exec alacritty -e bluetoothctl            # b for bluetooth.
+bindsym $mod+r exec evince ~/Books/_current.pdf          # r for reading.
 bindsym $mod+Shift+b exec blueman-manager                # Blueman.
 bindsym $mod+Shift+Return exec alacritty \
 	-e ipython \
@@ -187,10 +188,10 @@ exec_always --no-startup-id ~/Scripts/xborders/xborders \
 
 # Run script to correctly lay out my monitors (and also fix monitor issues like
 # screen tearing).
-exec_always /home/tym/.screenlayout/main.sh
+exec_always --no-startup-id /home/tym/.screenlayout/main.sh
 
 # Remap caps and escape.
-exec_always setxkbmap -option caps:escape
+exec_always --no-startup-id setxkbmap -option caps:escape
 
 # Enable dunst daemon. Doing so allows you to invoke `notify-send`.
 exec --no-startup-id dunst &

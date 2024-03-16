@@ -8,3 +8,5 @@
 [pager]
 	log = false
     branch = false
+[color]
+	ui = true

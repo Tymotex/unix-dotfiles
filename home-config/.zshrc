@@ -81,7 +81,7 @@ echo -ne '\e[5 q'
 preexec() { echo -ne '\e[5 q' ;}
 
 # ============================================================================ #
-#                           Oh my ZSH Extensions                               #
+#                           Oh my ZSH and other Extensions                     #
 # ============================================================================ #
 PLUGINS_DIR=$HOME/.oh-my-zsh/custom/plugins
 
@@ -98,6 +98,9 @@ bindkey '^R' history-incremental-search-backward
 # The fuck extension. Corrects mistyped commands after issuing `fuck`.
 # https://github.com/nvbn/thefuck.
 eval $(thefuck --alias)
+
+# Zoxide: https://github.com/ajeetdsouza/zoxide.
+eval "$(zoxide init zsh)"
 
 # ============================================================================ #
 #                                    Aliases                                   #
@@ -138,4 +141,10 @@ alias b="git branch"
 # System notification.
 alias notify="notify-send"
 
+# Tools.
+alias less='less -N'
+alias cd='z'
 
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
