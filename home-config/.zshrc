@@ -144,7 +144,19 @@ alias notify="notify-send"
 # Tools.
 alias less='less -N'
 alias cd='z'
+alias clip-save='xclip -selection clipboard -t image/png -o > '
 
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
+# ============================================================================ #
+#                             Environment Variables
+# ============================================================================ #
+# For IBus to work.
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+
+# ============================================================================ #
+#                             Environment Variables
+# ============================================================================ #
+# Make `nvm` available for changing Node versions.
+source /usr/share/nvm/init-nvm.sh
+

@@ -141,13 +141,14 @@ bindsym $mod+d exec rofi \
 bindsym $mod+Shift+d exec rofimoji
 
 # Apps:
-bindsym $mod+g exec firefox                              # g for Google (originally)
+bindsym $mod+g exec google-chrome-stable                 # g for Google (originally)
 bindsym $mod+m exec spotify                              # m for Music
 bindsym $mod+o exec obsidian ~/Projects/wiki/content     # o for Obsidian
 bindsym $mod+p exec alacritty -e pulsemixer              # p for Pulsemixer
 bindsym $mod+Shift+p exec pavucontrol                    # p for Pavucontrol
 bindsym $mod+i exec alacritty -e nmtui                   # i for internet
-bindsym $mod+n exec alacritty -e yazi ~                  # n for nemo (originally)
+bindsym $mod+Shift+i exec alacritty -e nmcli device wifi rescan
+bindsym $mod+n exec nemo ~                               # n for nemo (originally)
 bindsym $mod+Shift+n exec nemo ~                         # n for nemo
 bindsym $mod+c exec code                                 # c for code (VSCode)
 bindsym $mod+Ctrl+O exec redshift -O 5000                # Redden the screen.
@@ -204,6 +205,10 @@ exec --no-startup-id autotiling \
 
 # Greenclip clipboard manager.
 exec --no-startup-id greenclip daemon>/dev/null
+
+# Start IBus to allow for input from other languages such as Chinese.
+# Hit Ctrl+Space to toggle this between Chinese and English.
+# exec --no-startup-id ibus-daemon -rxRd
 
 # =============================================================================
 #                                Appearance
