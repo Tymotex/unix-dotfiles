@@ -184,8 +184,9 @@ exec_always --no-startup-id picom --config ~/.config/picom/picom.conf &
 # Enable xborders instead of i3 borders.
 exec_always --no-startup-id ~/Scripts/xborders/xborders \
 	--border-radius=20 \
-	--border-width=4 \
-	--border-rgba='#EEEEEEAA' &
+	--border-width=6 \
+	--border-rgba='#644DF8EE' \
+	--disable-version-warning &
 
 # Run script to correctly lay out my monitors (and also fix monitor issues like
 # screen tearing).
