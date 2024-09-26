@@ -34,6 +34,12 @@ cd home-config && stow .
 sudo stow --target=/ --dir . root-config
 ```
 
+Or more conveniently, I have these aliases set in `.zshrc`:
+
+```sh
+alias syncdotfiles="stow --target=$HOME --adopt --dir . home-config"
+```
+
 ### Personal Maintenance
 
 Occasionally, run `pacman -Qqe > pkglist.txt` to update `pkglist.txt`, as instructed by https://wiki.archlinux.org/title/system_maintenance.
@@ -45,4 +51,5 @@ This list of packages can be restored by following the instructions at https://w
 - `xborders` is being used to overwrite default i3 borders. I've moved the repo
   containing the `xborders` script to `Scripts/xborders` and set up an alias to
   it in ZSH.
+- `i3-volume` is used to add a polybar module to display output volume.
 
