@@ -40,10 +40,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # Move window around with hjkl.
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $mod+Shift+h move left; split h
+bindsym $mod+Shift+j move down; split v
+bindsym $mod+Shift+k move up; split v
+bindsym $mod+Shift+l move right; split h
 
 # Split in horizontal orientation.
 bindsym $mod+Right split h
@@ -51,6 +51,9 @@ bindsym $mod+Left split h
 
 # Split in vertical orientation.
 bindsym $mod+Down split v
+
+# Focus the parent container.
+bindsym $mod+a focus parent
 
 # Enter fullscreen mode for the focused container.
 bindsym $mod+f fullscreen toggle
@@ -288,9 +291,6 @@ bindsym $mod+Shift+space floating toggle
 
 # Change focus between tiling / floating windows.
 bindsym $mod+space focus mode_toggle
-
-# Focus the parent container.
-bindsym $mod+a focus parent
 
 # Focus the child container.
 #bindsym $mod+d focus child
