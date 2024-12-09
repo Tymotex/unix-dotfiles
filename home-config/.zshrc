@@ -154,6 +154,10 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 
+# Lets Vim take over as the pager for viewing man pages.
+# https://github.com/vim/vim/issues/2823
+export MANPAGER='vim -M +MANPAGER -'
+
 # ============================================================================ #
 #                             Environment Variables
 # ============================================================================ #
