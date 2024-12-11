@@ -36,6 +36,7 @@ eog
 escrotum-git
 ethtool
 evince
+fatresize
 fcitx5
 fd
 feh
@@ -46,6 +47,7 @@ fuse2
 gimp
 git
 google-chrome
+gptfdisk
 grub
 gvim
 htop
@@ -118,10 +120,12 @@ rsync
 ruby
 sddm
 speedtest-cli
+spotify-launcher
 sshfs
 stow
 sudo
 sysfsutils
+telegram-desktop
 thefuck
 tree
 ttf-dejavu
