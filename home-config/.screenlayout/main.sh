@@ -7,7 +7,7 @@ nvidia-settings --assign CurrentMetaMode="\
     DP-0: nvidia-auto-select +3840+0 { ForceFullCompositionPipeline = On }, \
     DP-4: nvidia-auto-select +7680+0 { ForceFullCompositionPipeline = On }"
 
-WALLPAPER_PATH="$(find ~/Pictures/Wallpapers -type f | shuf -n 1)"
-
+# Randomly fetch a wallpaper from ~/Pictures/Wallpapers and set it.
+WALLPAPER_PATH="$(find -L ~/Pictures/Wallpapers -type f,l | shuf -n 1)"
 feh --bg-scale "$WALLPAPER_PATH"
 
