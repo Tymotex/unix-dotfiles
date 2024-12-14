@@ -92,7 +92,7 @@ source "${PLUGINS_DIR}/fast-syntax-highlighting/fast-syntax-highlighting.plugin.
 source "${PLUGINS_DIR}/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # FZF.
-source <(fzf --zsh)
+# source <(fzf --zsh)
 
 # Zoxide: https://github.com/ajeetdsouza/zoxide.
 eval "$(zoxide init zsh)"

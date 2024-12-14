@@ -6,10 +6,12 @@ amd-ucode
 android-file-transfer
 arandr
 arc-gtk-theme
+atuin
 autotiling
 baobab
 base
 base-devel
+bat
 betterlockscreen
 bind
 blender
@@ -72,7 +74,7 @@ linux-headers
 linux-lts
 linux-lts-headers
 lxappearance-gtk3
-ly
+ly-git
 man-db
 mtools
 nano
@@ -152,6 +154,7 @@ xorg-xev
 xorg-xinit
 yarn
 yay
+yay-debug
 yazi
 yt-dlp
 zip
