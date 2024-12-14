@@ -26,15 +26,6 @@ zstyle ':omz:update' frequency 13
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"
 
-# Which plugins would you like to load?
-#   Standard plugins can be found in $ZSH/plugins/
-#   Custom plugins may be added to $ZSH/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(
-	git
-	zsh-autosuggestions
-)
-
 source $ZSH/oh-my-zsh.sh
 
 # ============================================================================ #
@@ -49,6 +40,10 @@ source $HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
 # ============================================================================ #
 #                                Shell Settings                                #
 # ============================================================================ #
+# Enable reverse search (builtin).
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+
 # -------------------------- Enable Vim keybindings -------------------------- #
 set -o vi
 export EDITOR='vim'
@@ -85,22 +80,27 @@ preexec() { echo -ne '\e[5 q' ;}
 # ============================================================================ #
 PLUGINS_DIR=$HOME/.oh-my-zsh/custom/plugins
 
+# Plugins.
+plugins=(
+	git
+)
+
 # Syntax highlighting.
 source "${PLUGINS_DIR}/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
 
 # Autosuggestions.
 source "${PLUGINS_DIR}/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
-# Enable reverse search (builtin).
-bindkey -v
-bindkey '^R' history-incremental-search-backward
-
-# The fuck extension. Corrects mistyped commands after issuing `fuck`.
-# https://github.com/nvbn/thefuck.
-eval $(thefuck --alias)
+# FZF.
+source <(fzf --zsh)
 
 # Zoxide: https://github.com/ajeetdsouza/zoxide.
 eval "$(zoxide init zsh)"
+
+# Atuin.
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh --disable-up-arrow)"
+bindkey '^h' _atuin_search_widget
 
 # ============================================================================ #
 #                                    Aliases                                   #
