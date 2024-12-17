@@ -15,6 +15,8 @@ ExecStart= \
     --umask 022 \
     GoogleDriveWiki:wiki %h/Wiki
 ExecStop=/bin/fusermount -u %h/Wiki
+Restart=on-failure
+RestartSec=5
 
 [Install]
 WantedBy=default.target

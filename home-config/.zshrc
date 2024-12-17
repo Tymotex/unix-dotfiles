@@ -26,6 +26,31 @@ zstyle ':omz:update' frequency 13
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"
 
+# ============================================================================ #
+#                           Oh my ZSH and other Extensions                     #
+# ============================================================================ #
+PLUGINS_DIR=$HOME/.oh-my-zsh/custom/plugins
+
+# Plugins.
+plugins=(
+	git
+	fast-syntax-highlighting
+	zsh-autosuggestions
+	zsh-vi-mode
+)
+
+# FZF.
+# source <(fzf --zsh)
+
+# Zoxide: https://github.com/ajeetdsouza/zoxide.
+eval "$(zoxide init zsh)"
+
+# Atuin.
+. "$HOME/.atuin/bin/env"
+eval "$(atuin init zsh --disable-up-arrow)"
+bindkey '^h' _atuin_search_widget
+
+# This line must be after the above `plugins` array.
 source $ZSH/oh-my-zsh.sh
 
 # ============================================================================ #
@@ -74,33 +99,6 @@ echo -ne '\e[5 q'
 
 # Use beam shape cursor for each new prompt.
 preexec() { echo -ne '\e[5 q' ;}
-
-# ============================================================================ #
-#                           Oh my ZSH and other Extensions                     #
-# ============================================================================ #
-PLUGINS_DIR=$HOME/.oh-my-zsh/custom/plugins
-
-# Plugins.
-plugins=(
-	git
-)
-
-# Syntax highlighting.
-source "${PLUGINS_DIR}/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh"
-
-# Autosuggestions.
-source "${PLUGINS_DIR}/zsh-autosuggestions/zsh-autosuggestions.zsh"
-
-# FZF.
-# source <(fzf --zsh)
-
-# Zoxide: https://github.com/ajeetdsouza/zoxide.
-eval "$(zoxide init zsh)"
-
-# Atuin.
-. "$HOME/.atuin/bin/env"
-eval "$(atuin init zsh --disable-up-arrow)"
-bindkey '^h' _atuin_search_widget
 
 # ============================================================================ #
 #                                    Aliases                                   #
