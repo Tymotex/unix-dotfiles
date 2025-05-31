@@ -162,3 +162,15 @@ export MANPAGER='vim -M +MANPAGER -'
 # Make `nvm` available for changing Node versions.
 source /usr/share/nvm/init-nvm.sh
 
+# ============================================================================ #
+#                                   Override
+# ============================================================================ #
+# Ensure less always preserves colour of things piped to it.
+export LESS="-R"
+
+# ============================================================================ #
+#                                    Scripts
+# ============================================================================ #
+# Custom scripts in ~/Scripts.
+PATH=$PATH:~/Scripts
+

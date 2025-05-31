@@ -1,8 +1,35 @@
 [user]
 	email = admin@timz.dev
 	name = Tim Zhang
+[alias]
+        unadd = reset HEAD
+        discard = checkout --
+        untrack = rm --cached
+        lg = "!f() { \
+        local num_lines=${1:-11}; \
+        local i=0; \
+        git log --pretty=format:\"%C(yellow)%h%Creset %C(green)%ad%Creset %C(bold blue)<%an>%Creset%C(red)%d%Creset %s\" --date=short --abbrev-commit --color=always -n "$((num_lines+1))" | while read -r line; do \
+            echo \"  ~$i $line\" | sed \"s/%P(i)/$i/\"; \
+            i=$((i+1)); \
+        done; \
+    }; f"
+        cm = commit -m
+        c = commit
+        br = "!f() { if [ -z \"$1\" ]; then git branch; else git branch --list \"*$@*\"; fi; }; f"
+        co = checkout
+        cob = checkout -b
+        ri = "!f() { git rebase --interactive HEAD~${1:-5}; }; f"
+        rc = rebase --continue
+        a = "!f() { if [ -z \"$1\" ]; then git add .; else git add \"$@\"; fi; }; f"
+        ca = commit --amend
+        can = commit --amend --no-edit
+        d = diff
+        dc = diff --cached
+        # st = git-st <-- I added a `git-st` script to my PATH from https://www.reddit.com/r/git/comments/avv34g/nicer_gitstatus/.
+        # When I run `git st`, Git automatically finds and runs `git-st`. So no need for an alias.
 [core]
 	editor = vim
+	pager = cat
 [credential]
 	helper = store
 [pager]
